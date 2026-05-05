@@ -172,111 +172,123 @@ export const openSource = {
 
 export const bigProjects = {
   title: "Projets & Réalisations",
-  subtitle: "Mes principaux projets professionnels et académiques en Data",
+  subtitle: "Projets Data Engineering et Data Science",
   display: true,
   projects: [
     {
-      projectName: "Data Masking — Generali France",
+      projectName: "Pipeline ETL en Python",
       projectDesc:
-        "Solution complète de protection des données sensibles en environnement Snowflake, avec application Streamlit et logique de gouvernance RGPD.",
+        "Pipeline complet d'extraction, transformation et chargement de données avec une architecture modulaire.",
       descBullets: [
-        "Ingestion de métadonnées Zeenea avec Airflow.",
-        "Classification des données sensibles via Data Catalog.",
-        "Utilisation des tags Snowflake et des politiques de masquage dynamique.",
-        "Gestion des accès avec RBAC.",
-        "Développement d’une application Streamlit pour sélectionner, valider et suivre les colonnes sensibles.",
-        "Expérimentation LLM pour détecter les données sensibles."
-      ],
-      footerLink: [
-        { name: "Python" },
-        { name: "Snowflake" },
-        { name: "Airflow" },
-        { name: "Streamlit" },
-        { name: "RGPD" }
-      ]
-    },
-    {
-      projectName: "Data Quality — Generali France",
-      projectDesc:
-        "Mise en place d’une démarche complète de Data Quality avec contrôles automatisés et dashboards de suivi.",
-      descBullets: [
-        "Formalisation des règles de complétude, cohérence et unicité.",
-        "Contrôles automatisés avec Python, Pandas et SQL.",
-        "Détection des doublons et incohérences sur données SIRET.",
-        "Dashboards Power BI pour le suivi des KPI qualité.",
-        "Analyse d’anomalies sur données volumineuses avec PySpark."
+        "Extraction de données depuis fichiers CSV et Excel.",
+        "Nettoyage : gestion des valeurs manquantes et suppression des doublons.",
+        "Transformation avec Pandas : jointures, agrégations et calcul d’indicateurs.",
+        "Structuration du code en modules (cleaning, processing, transformation).",
+        "Export des données en Parquet pour optimisation des performances.",
+        "Mise en place de logs pour le suivi des traitements."
       ],
       footerLink: [
         { name: "Python" },
         { name: "Pandas" },
-        { name: "SQL" },
-        { name: "Power BI" },
-        { name: "PySpark" }
+        { name: "ETL" },
+        { name: "Parquet" }
       ]
     },
     {
-      projectName: "Zeenea vers Snowflake — Pipeline Data",
+      projectName: "Data Pipeline avec dbt et Snowflake",
       projectDesc:
-        "Pipeline ELT permettant d’exploiter les métadonnées du Data Catalog Zeenea dans Snowflake.",
+        "Pipeline ELT pour transformer des données brutes en données analytiques dans Snowflake.",
       descBullets: [
-        "Extraction de fichiers JSON / VARIANT.",
-        "Transformation des données avec Python et Snowpark.",
-        "Chargement dans Snowflake.",
-        "Contrôles de cohérence et traçabilité."
+        "Structuration en couches : staging, intermediate, marts.",
+        "Transformation des données avec dbt (modèles SQL, macros).",
+        "Implémentation de calculs métiers (chiffre d’affaires, performance produits).",
+        "Organisation d’un workflow data versionné et reproductible."
       ],
       footerLink: [
-        { name: "Airflow" },
+        { name: "dbt" },
         { name: "Snowflake" },
-        { name: "Snowpark" },
-        { name: "Python" }
+        { name: "SQL" },
+        { name: "ELT" }
       ]
     },
     {
-      projectName: "Géolocalisation Médecins — Generali",
+      projectName: "Traitement de données avec PySpark",
       projectDesc:
-        "Application Streamlit de géolocalisation et visualisation cartographique des médecins.",
+        "Pipeline de traitement de données volumineuses en environnement distribué.",
       descBullets: [
-        "Chargement et nettoyage de données médecins.",
-        "Géocodage des adresses.",
-        "Visualisation cartographique avec carte interactive.",
-        "Respect des contraintes RGPD."
+        "Nettoyage et transformation de données avec PySpark.",
+        "Jointures et agrégations distribuées.",
+        "Manipulation de datasets volumineux (CSV, Parquet).",
+        "Optimisation des performances via le calcul distribué."
+      ],
+      footerLink: [
+        { name: "PySpark" },
+        { name: "Big Data" },
+        { name: "Parquet" }
+      ]
+    },
+    {
+      projectName: "Prévision de séries temporelles",
+      projectDesc:
+        "Modélisation de données temporelles pour analyser et prévoir des tendances.",
+      descBullets: [
+        "Analyse des tendances et saisonnalités.",
+        "Préparation des données temporelles et feature engineering.",
+        "Implémentation de modèles ARIMA et régression.",
+        "Évaluation et comparaison des performances."
       ],
       footerLink: [
         { name: "Python" },
-        { name: "Streamlit" },
-        { name: "Plotly" },
-        { name: "RGPD" }
+        { name: "Time Series" },
+        { name: "ARIMA" }
       ]
     },
     {
-      projectName: "Matrice Compétences — Académie Generali",
+      projectName: "Détection de fake news (NLP)",
       projectDesc:
-        "Matrice de suivi des compétences pour optimiser les parcours de formation internes.",
+        "Modèle de classification de textes pour détecter les informations trompeuses ou non fiables.",
       descBullets: [
-        "Mapping profils collaborateurs / besoins en formation.",
-        "Structuration des données pour analyser les écarts de compétences.",
-        "Aide au pilotage RH et formation."
-      ],
-      footerLink: [
-        { name: "Data Analysis" },
-        { name: "Formation" },
-        { name: "RH" }
-      ]
-    },
-    {
-      projectName: "Détection d’Anomalies — Sonatrach",
-      projectDesc:
-        "Projet Machine Learning sur données industrielles pour détecter des comportements anormaux.",
-      descBullets: [
-        "Nettoyage et préparation de données industrielles.",
-        "Feature engineering.",
-        "Modélisation avec Scikit-learn.",
-        "Évaluation avec précision, recall et ROC."
+        "Prétraitement des données textuelles (nettoyage, tokenisation).",
+        "Vectorisation avec TF-IDF.",
+        "Entraînement de modèles de classification.",
+        "Évaluation des performances (précision, recall, F1-score)."
       ],
       footerLink: [
         { name: "Python" },
-        { name: "Machine Learning" },
-        { name: "Scikit-learn" }
+        { name: "NLP" },
+        { name: "Machine Learning" }
+      ]
+    },
+    {
+      projectName: "Classification de messages spam",
+      projectDesc:
+        "Modèle de classification de SMS pour détecter les messages frauduleux et indésirables.",
+      descBullets: [
+        "Prétraitement des messages (nettoyage, tokenisation).",
+        "Vectorisation avec TF-IDF.",
+        "Entraînement de modèles de classification (Naive Bayes, Logistic Regression).",
+        "Évaluation des performances et analyse des erreurs."
+      ],
+      footerLink: [
+        { name: "Python" },
+        { name: "NLP" },
+        { name: "TF-IDF" }
+      ]
+    },
+    {
+      projectName: "Classification de texte avec BERT",
+      projectDesc:
+        "Projet NLP de classification de texte basé sur les Transformers.",
+      descBullets: [
+        "Prétraitement des données textuelles.",
+        "Fine-tuning du modèle BERT.",
+        "Comparaison avec RNN et LSTM.",
+        "Évaluation et optimisation."
+      ],
+      footerLink: [
+        { name: "NLP" },
+        { name: "BERT" },
+        { name: "Transformers" }
       ]
     }
   ]
